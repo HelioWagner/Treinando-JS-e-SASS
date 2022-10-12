@@ -1,0 +1,122 @@
+$Amarelo     : #FCE6A8;
+$Verde       : #8FBCB3;
+$CinzaClaro  : #DFE6ED;
+$CinzaMedio  : #C3CFD9;
+$CinzaEscuro : #788895;
+$pretosombra  :#666;
+
+
+@mixin busca-cor($cor) {
+    background-color:$cor;
+}
+
+@mixin alinhamento_Container($display,$direcao,$justify, $alignitems) {
+      display        :  $display;
+      flex-direction :  $direcao;
+      justify-content:  $justify;
+      align-items    :  $alignitems;
+}
+
+* {
+    padding: 0px;
+    margin : 0px;
+    box-sizing: border-box;
+}
+
+body {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 12% 88%;
+      grid-template-areas:
+          "Cabecalho"
+          "principal"; 
+      height: 99vh; 
+      @include busca-cor($Amarelo);
+      padding: 10px;
+      gap: 10px;
+}
+
+.cabecalho {
+    grid-area: "cabecalho";
+    @include alinhamento_Container(flex,row,center,center); 
+    @include busca-cor($Verde);
+}
+
+.principal {
+    grid-area: "principal";
+    @include alinhamento_Container(flex,column,center,center); 
+    @include busca-cor($Verde);
+    gap: 10px;
+    padding: 10px
+}
+
+.card-principal {     
+
+    @include alinhamento_Container(flex,row,center,center); 
+    height          : 100%;
+    flex-grow: 1;
+    @include busca-cor($CinzaClaro);
+    width: 450px; 
+    flex-grow       : 1;
+    padding: 10px;
+}
+
+.card-principal__Entrada {     
+    @include alinhamento_Container(flex,column,center,center); 
+    @include busca-cor($CinzaClaro);
+    > input {
+        width: 180px;
+        height: 30px;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    > button {
+        width: 180px;
+        height: 30px;
+        border-radius: 5px;
+        @include busca-cor($CinzaEscuro);
+        color: white;
+    }
+
+    ::placeholder { 
+        text-align: center;
+    }
+
+    > button:hover {background-color:$CinzaEscuro;}
+
+    > button:active {
+      background-color:  $CinzaEscuro;
+      box-shadow: 0 2px $pretosombra;
+      transform: translateY(2px);
+    }
+    gap: 5px;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.card-principal__resultado {
+    @include alinhamento_Container(flex,column,center,flex-start); 
+    height          : 100%;
+    flex-grow       : 1;
+    width: 100%;  
+    @include busca-cor($CinzaMedio);
+    border: 2px $CinzaEscuro solid;
+    padding: 5px;
+
+
+}
+
+
+.resultado_final {
+    @include alinhamento_Container(flex,column,center,center); 
+    height          : 100%;
+    align-self     : center;
+    display        :  flex;
+    flex-direction :  row;
+    height         : 100%;
+    font-size: 80px;
+}
+
+
+

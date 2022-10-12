@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="calcula.js"></script>
+    <title>Treinando JS e SASS</title>
+</head>
+<body>
+       
+        <header class="cabecalho">
+             <h1>Treinando JS e SASS</h1>
+        </header>
+
+        <main class="principal">
+            <div class="card-principal">
+                <div class="card-principal__Entrada">
+                    <input class="valor__Digitado__Soma" type="text" alt="Digite Primeiro número pra somar" placeholder="Digite um número">
+                    <input class="valor__Digitado__Soma" type="text" alt="Digite Segundo número pra somar" placeholder="Digite um número">
+                    <button class="calcula_soma">Somar</button>
+                </div>
+                <div class="card-principal__resultado">
+                    <p>Resultado:</p>
+                     <p id="resultado_final_soma" class="resultado_final">0</p>
+                </div>
+            </div>
+            
+            <div class="card-principal">
+                <div class="card-principal__Entrada">
+                    <input class="valor__Digitado__multiplica" type="text" alt="Digite Primeiro número pra somar" placeholder="Digite um número">
+                    <input class="valor__Digitado__multiplica" type="text" alt="Digite Segundo número pra somar" placeholder="Digite um número">
+                    <button class="calcula_multiplica">Multiplicar</button>
+                </div>
+                <div class="card-principal__resultado">
+                    <p>Resultado:</p>
+                    <p id="resultado_final_multiplicar" class="resultado_final">0</p>
+                </div>
+            </div>
+
+            <div class="card-principal">
+                <div class="card-principal__Entrada">
+                    <input class="valor__Digitado__dividir" type="text" alt="Digite Primeiro número pra somar" placeholder="Digite um número">
+                    <input class="valor__Digitado__dividir" type="text" alt="Digite Segundo número pra somar" placeholder="Digite um número">
+                    <button class="calcula_dividir">Dividir</button>
+                </div>
+                <div class="card-principal__resultado">
+                     <p>Resultado:</p>
+                     <p id="resultado_final_dividir" class="resultado_final">0</p>
+                </div>
+            </div>
+        </main>
+    
+</body>
+</html>

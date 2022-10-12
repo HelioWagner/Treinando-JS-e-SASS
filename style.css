@@ -1,0 +1,116 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 12% 88%;
+  grid-template-areas: "Cabecalho" "principal";
+  height: 99vh;
+  background-color: #FCE6A8;
+  padding: 10px;
+  gap: 10px;
+}
+
+.cabecalho {
+  grid-area: "cabecalho";
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #8FBCB3;
+}
+
+.principal {
+  grid-area: "principal";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #8FBCB3;
+  gap: 10px;
+  padding: 10px;
+}
+
+.card-principal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-grow: 1;
+  background-color: #DFE6ED;
+  width: 450px;
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.card-principal__Entrada {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #DFE6ED;
+  gap: 5px;
+  flex-grow: 1;
+  width: 100%;
+}
+.card-principal__Entrada > input {
+  width: 180px;
+  height: 30px;
+  border-radius: 5px;
+  text-align: center;
+}
+.card-principal__Entrada > button {
+  width: 180px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #788895;
+  color: white;
+}
+.card-principal__Entrada ::-moz-placeholder {
+  text-align: center;
+}
+.card-principal__Entrada :-ms-input-placeholder {
+  text-align: center;
+}
+.card-principal__Entrada ::placeholder {
+  text-align: center;
+}
+.card-principal__Entrada > button:hover {
+  background-color: #788895;
+}
+.card-principal__Entrada > button:active {
+  background-color: #788895;
+  box-shadow: 0 2px #666;
+  transform: translateY(2px);
+}
+
+.card-principal__resultado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  flex-grow: 1;
+  width: 100%;
+  background-color: #C3CFD9;
+  border: 2px #788895 solid;
+  padding: 5px;
+}
+
+.resultado_final {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  font-size: 80px;
+}/*# sourceMappingURL=style.css.map */
